@@ -1,5 +1,5 @@
 # GitSync
-Syncronize a folder on a remote server with git. 
+Syncronize a folder on a remote server with git.
 I write code on my laptop and push it to a non-production development server for testing. This model is great for my workflow. I offload app processing from my laptop and can test unimpeded in a near-production environment with a no-nonsense build/deploy system. Plus it's secure and forces me to keep a good commit history.
 
 This will take a few steps of configuration per specific environment.
@@ -7,10 +7,11 @@ This will take a few steps of configuration per specific environment.
 This is intended to be installed with a project and run in the same repo you are developing on. So it's node-only for now.
 
 ## Usage
-  ```node gitsync branch webhookSecret [port] [endpoint]```
+  ```node gitsync -s secret [-b branch] [-p port] [-r route]```
 
 ### Launch the service
-Use whatever means necessary to launch the system in a persistent way (so that it will stay listening while you do other things)
+Use whatever means necessary to launch the system in a persistent way (so that it will stay alive while you do other things).
+>!Important! Make sure you remember the value you use for the secret. This doesn't have to be super secure, just enough that it might not be guessed.
 
 ### Register a webhook to an open endpoint.
 Your system will need to be open to the internet to receive update events from github's webhooks services.
