@@ -1,6 +1,6 @@
 var http = require('http');
 
-var helpMsg = "\nUsage:  node gitsync -s secret [-b branch] [-p port] [-r route]\n"+
+var helpMsg = "\nUsage:  node syncgit -s secret [-b branch] [-p port] [-r route]\n"+
             "    secret - the secret of the associated webhook\n"+
             "    [branch] - (default 'master') the branch you will be syncing with\n"+
             "    [port] - (default 3021) port that the webhook should listen on.\n"+

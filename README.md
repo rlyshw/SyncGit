@@ -1,4 +1,4 @@
-# GitSync
+# SyncGit
 Syncronize a local branch with the remote counterpart using github's webhooks services.
 
 ### Why?
@@ -10,7 +10,7 @@ This is intended to be installed with a project and run in the same repo you are
 
 ## Usage
   ```
-  node gitsync -s secret [-b branch] [-p port] [-r route]
+  node syncgit -s secret [-b branch] [-p port] [-r route]
     secret - the secret of the associated webhook
     [branch] - (default 'master') the branch you will be syncing with
     [port] - (default 3021) port that the webhook should listen on.
@@ -32,6 +32,6 @@ Your system will need to be open to the internet to receive update events from g
 
 >Your system needs to be accessible by github from the web. Make sure you are using an open port!
 
-6. Enter the secret value you provided to the command to begin with. REMEMBER this, you'll have to provide it to the gitsync script each time you rerun it.
+6. Enter the secret value you provided to the command to begin with. REMEMBER this, you'll have to provide it to the syncgit script each time you rerun it.
 7. click "Add Webhook".
 8. Done! Start rapidly developing/testing webapps in a near-production environment.
