@@ -5,20 +5,25 @@ var helpMsg = "\nUsage:  node gitsync -s secret -b [branch] -p [port] -r [route]
             "    [branch] - (default 'master') the branch you will be syncing with\n"+
             "    [port] - (default 3021) port that the webhook should listen on.\n"+
             "    [route] - (default /nodedevhook) the route endpoint that webhook will post to";
+var secret;
+var branch;
+var port;
+var route;
+
 
 process.argv.forEach(function(arg, i){
   var param = process.argv[i+1];
   if(arg.match(/^-s/)){
-    var secret = param;
+    secret = param;
   }
   if(arg.match(/^-b/)){
-    var branch = param;
+    branch = param;
   }
   if(arg.match(/^-p/)){
-    var port = param;
+    port = param;
   }
   if(arg.match(/^-r/)){
-    var route = param;
+    route = param;
   }
 });
 
