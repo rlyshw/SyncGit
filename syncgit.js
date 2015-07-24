@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var http = require('http');
 
 var helpMsg = "\nUsage:  node syncgit -s secret [-b branch] [-p port] [-r route]\n"+
