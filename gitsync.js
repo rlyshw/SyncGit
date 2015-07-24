@@ -63,7 +63,7 @@ handler.on('push', function(event){
     if(err) return console.log(err);
     //console.log(succ);
   });
-  console.log('Received a push event for %s to %s',
+  console.log('Updating %s. Branch %s',
     event.payload.repository.name,
     event.payload.ref);
 });
