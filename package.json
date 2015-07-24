@@ -1,8 +1,8 @@
 {
   "name": "syncgit",
-  "version": "1.0.1",
+  "version": "1.0.01",
   "description": "syncs a local repo with remote",
-  "main": "gitsync.js",
+  "main": "syncgit.js",
   "scripts": {
   },
   "repository": {
@@ -26,6 +26,6 @@
     "gitty": "^3.2.3"
   },
   "bin": {
-    "syncgit": "./syncgit.js"
+    "syncgit": "syncgit.js"
   }
 }
