@@ -1,6 +1,9 @@
 var http = require('http');
 
 var secret = process.argv[2];
+var branch = process.argv[3] || 'master';
+var port = process.argv[4] || "3021";
+var endpoint = process.argv[5] || "/nodedevhook"
 var helpMsg = "\nUsage:  node gitsync mywebhooksecret [branch] [port] [endpoint]\n"+
             "    webhooksecret - the secret of the github webhook associated with this environment\n"+
             "    [branch] - (default 'master') the branch you will be syncing with\n"+
@@ -13,7 +16,7 @@ if(!secret){
   console.log(helpMsg);
   return;
 }
-var handler = require('github-webhook-handler')({path: '/nodedevhook' || process.argv[5], secret: secret});
+var handler = require('github-webhook-handler')({path: endpoint, secret: secret});
 
 var git = require("gitty");
 var repo = git("./");
@@ -23,7 +26,8 @@ http.createServer(function(req, res) {
     res.statusCode = 404;
     res.end('no such location');
   });
-}).listen(process.argv[4]||3021, '0.0.0.0');
+}).listen(port, '0.0.0.0');
+console.log("\nListening on port",port,"at",endpoint,"for PUSH events on the",branch,"branch...");
 handler.on('error', function(err){
   console.error("Error:", err.message);
 });
@@ -33,7 +37,7 @@ handler.on('ping', function(event){
 });
 
 handler.on('push', function(event){
-  repo.pull('origin', branch || 'master', function(err, succ){
+  repo.pull('origin', branch, function(err, succ){
     if(err) return console.log(err);
     console.log(succ);
   });
