@@ -9,11 +9,13 @@ This will take a few steps of configuration per specific environment.
 This is intended to be installed with a project and run in the same repo you are developing on. So it's node-only for now. It also relies on github's webhooks infrastructure, so it is limited to github-based projects.
 
 ## Usage
-  ```node gitsync -s secret [-b branch] [-p port] [-r route]
+  ```
+  node gitsync -s secret [-b branch] [-p port] [-r route]
     secret - the secret of the associated webhook
     [branch] - (default 'master') the branch you will be syncing with
     [port] - (default 3021) port that the webhook should listen on.
-    [route] - (default /nodedevhook) the route endpoint of the webhook```
+    [route] - (default /nodedevhook) the route endpoint of the webhook
+  ```
 
 ### Launch the service
 Use whatever means necessary to launch the system in a persistent way (so that it will stay alive while you do other things).
@@ -27,7 +29,9 @@ Your system will need to be open to the internet to receive update events from g
 3. Click "Webhooks and Services"
 4. Click "Add a Webhook" and confirm your password
 5. Enter `https://[exampledomain.com]:3021/nodedevhook` in the given prompt. (you can configure port and route should match the arguments you passed to the command)
+
 >Your system needs to be accessible by github from the web. Make sure you are using an open port!
+
 6. Enter the secret value you provided to the command to begin with. REMEMBER this, you'll have to provide it to the gitsync script each time you rerun it.
 7. click "Add Webhook".
 8. Done! Start rapidly developing/testing webapps in a near-production environment.
