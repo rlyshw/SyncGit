@@ -1,6 +1,6 @@
 {
   "name": "syncgit",
-  "version": "1.1.1",
+  "version": "1.0.1",
   "description": "syncs a local repo with remote",
   "main": "gitsync.js",
   "scripts": {
