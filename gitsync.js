@@ -1,14 +1,27 @@
 var http = require('http');
 
-var secret = process.argv[2];
-var branch = process.argv[3] || 'master';
-var port = process.argv[4] || "3021";
-var endpoint = process.argv[5] || "/nodedevhook"
-var helpMsg = "\nUsage:  node gitsync mywebhooksecret [branch] [port] [endpoint]\n"+
+var helpMsg = "\nUsage:  node gitsync -s secret -b [branch] -p [port] -r [route]\n"+
             "    webhooksecret - the secret of the github webhook associated with this environment\n"+
             "    [branch] - (default 'master') the branch you will be syncing with\n"+
             "    [port] - (default 3021) port that the webhook should listen on.\n"+
-            "    [endpoint] - (default /nodedevhook) the route endpoint that webhook will post to";
+            "    [route] - (default /nodedevhook) the route endpoint that webhook will post to";
+
+process.argv.forEach(function(arg, i){
+  var param = process.argv[i+1];
+  if(arg.match(/^-s/)){
+    var secret = param;
+  }
+  if(arg.match(/^-b/)){
+    var branch = param;
+  }
+  if(arg.match(/^-p/)){
+    var port = param;
+  }
+  if(arg.match(/^-r/)){
+    var route = param;
+  }
+});
+
 if(!secret){
   console.log("\nSecret value is required\n",helpMsg);
   return;
@@ -16,7 +29,7 @@ if(!secret){
   console.log(helpMsg);
   return;
 }
-var handler = require('github-webhook-handler')({path: endpoint, secret: secret});
+var handler = require('github-webhook-handler')({path: route, secret: secret});
 
 var git = require("gitty");
 var repo = git("./");
