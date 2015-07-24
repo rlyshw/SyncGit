@@ -1,13 +1,13 @@
 {
   "name": "syncgit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "syncs a local repo with remote",
   "main": "gitsync.js",
   "scripts": {
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rlyshw/GitSync.git"
+    "url": "git+https://github.com/rlyshw/SyncGit.git"
   },
   "keywords": [
     "git",
@@ -26,6 +26,6 @@
     "gitty": "^3.2.3"
   },
   "bin": {
-    "syncgit": "syncgit.js"
+    "syncgit": "./syncgit"
   }
 }
