@@ -4,7 +4,6 @@
   "description": "syncs a local repo with remote",
   "main": "gitsync.js",
   "scripts": {
-    "test": "test"
   },
   "repository": {
     "type": "git",
@@ -16,7 +15,7 @@
     "remotesync",
     "remote"
   ],
-  "author": "rlyshw",
+  "author": "rlyshw <rlyshw@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rlyshw/GitSync/issues"
