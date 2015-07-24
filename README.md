@@ -6,7 +6,7 @@ I write code on my laptop and push it to a non-production development server for
 
 This will take a few steps of configuration per specific environment.
 
-This is intended to be installed with a project and run in the same repo you are developing on. So it's node-only for now.
+This is intended to be installed with a project and run in the same repo you are developing on. So it's node-only for now. It also relies on github's webhooks infrastructure, so it is limited to github-based projects.
 
 ## Usage
   ```node gitsync -s secret [-b branch] [-p port] [-r route]```
