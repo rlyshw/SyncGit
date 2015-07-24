@@ -26,6 +26,6 @@
     "gitty": "^3.2.3"
   },
   "bin": {
-    "syncgit": "syncgit.js"
+    "syncgit": "./syncgit.js"
   }
 }
