@@ -9,7 +9,11 @@ This will take a few steps of configuration per specific environment.
 This is intended to be installed with a project and run in the same repo you are developing on. So it's node-only for now. It also relies on github's webhooks infrastructure, so it is limited to github-based projects.
 
 ## Usage
-  ```node gitsync -s secret [-b branch] [-p port] [-r route]```
+  ```node gitsync -s secret [-b branch] [-p port] [-r route]
+    secret - the secret of the associated webhook
+    [branch] - (default 'master') the branch you will be syncing with
+    [port] - (default 3021) port that the webhook should listen on.
+    [route] - (default /nodedevhook) the route endpoint of the webhook```
 
 ### Launch the service
 Use whatever means necessary to launch the system in a persistent way (so that it will stay alive while you do other things).
