@@ -1,5 +1,5 @@
 {
-  "name": "nodegitsync",
+  "name": "syncgit",
   "version": "1.0.0",
   "description": "syncs a local repo with remote",
   "main": "gitsync.js",
