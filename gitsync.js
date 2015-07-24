@@ -61,7 +61,7 @@ handler.on('ping', function(event){
 handler.on('push', function(event){
   repo.pull('origin', branch, function(err, succ){
     if(err) return console.log(err);
-    console.log(succ);
+    //console.log(succ);
   });
   console.log('Received a push event for %s to %s',
     event.payload.repository.name,
