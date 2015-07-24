@@ -1,0 +1,29 @@
+{
+  "name": "nodegitsync",
+  "version": "1.0.0",
+  "description": "syncs a local repo with remote",
+  "main": "gitsync.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlyshw/GitSync.git"
+  },
+  "keywords": [
+    "git",
+    "sync",
+    "remotesync",
+    "remote"
+  ],
+  "author": "rlyshw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rlyshw/GitSync/issues"
+  },
+  "homepage": "https://github.com/rlyshw/GitSync#readme",
+  "dependencies": {
+    "github-webhook-handler": "^0.5.0",
+    "gitty": "^3.2.3"
+  }
+}
