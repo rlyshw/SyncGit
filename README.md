@@ -1,5 +1,5 @@
 # GitSync
-Syncronize a folder on a remote server with git.
+Syncronize a local branch with the remote counterpart using github's webhooks services.
 
 ### Why?
 I write code on my laptop and push it to a non-production development server for testing. This model is great for my workflow. I offload app processing from my laptop and can test unimpeded in a near-production environment with a no-nonsense build/deploy system. Plus it's secure and forces me to keep a good commit history.
