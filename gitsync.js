@@ -27,6 +27,10 @@ process.argv.forEach(function(arg, i){
   }
 });
 
+branch = branch || "master";
+port = port || "3021";
+route = route || "/nodedevhook";
+
 if(!secret){
   console.log("\nSecret value is required\n",helpMsg);
   return;
