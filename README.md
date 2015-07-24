@@ -17,6 +17,7 @@ Use whatever means necessary to launch the system in a persistent way (so that i
 
 ### Register a webhook to an open endpoint.
 Your system will need to be open to the internet to receive update events from github's webhooks services.
+
 1. Go to the github page for the repo.
 2. Click "Settings" (it's on the right)
 3. Click "Webhooks and Services"
