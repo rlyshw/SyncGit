@@ -4,8 +4,10 @@ I write code on my laptop and push it to a non-production development server for
 
 This will take a few steps of configuration per specific environment.
 
+This is intended to be installed with a project and run in the same repo you are developing on. So it's node-only for now.
+
 ## Usage
-  ```gitsync /path/to/local/repo branch webhookSecret [port] [endpoint]```
+  ```node gitsync branch webhookSecret [port] [endpoint]```
 
 ### Launch the service
 Use whatever means necessary to launch the system in a persistent way (so that it will stay listening while you do other things)
