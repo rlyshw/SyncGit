@@ -49,7 +49,7 @@ http.createServer(function(req, res) {
     res.end('no such location');
   });
 }).listen(port, '0.0.0.0');
-console.log("\nListening on port",port,"at",route,"for PUSH events on the",branch,"branch...");
+console.log("\nListening on port",port,"at",route,"for PUSH events on the",branch,"branch...\n");
 handler.on('error', function(err){
   console.error("Error:", err.message);
 });
